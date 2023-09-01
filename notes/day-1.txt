@@ -1,0 +1,100 @@
+HTML
+	Hyper Text Mark-up Language => helps you create a static web page
+
+CSS
+	Cascading Style Sheet => apply styles to the static web page
+
+JavaScript
+	codes (lines of instruction to do something) are written to provide dynamism (i.e. to convert the static web pages into dynamic web pages)
+
+
+create static web page:
+	HTML => provides many pre-defined/built-in "tags" or "elements" to create the design of the web page
+such as - H1,..., H6 => heading tag
+	  a => anchor tag
+
+	tags can be nested in each other. the wrapper tag is known as parent tag/element (H1) and the tag(s) nested inside is/are known as child tag/children tags
+	even texts can be nested inside a tag, known as Text Node
+
+	i.e. HTML tags can contain other tag(s) as well textual node (text) inside them
+	<H1>
+		<i>
+			THE TIMES OF INDIA 
+		</i>
+	</H1>
+
+	<tag-name> => openning tag
+	</tag-name> => closing tag
+
+	If a tag does not have a closing tag, that element is known as Empty tag
+	<br> => line break, <meta> => to provide metadata (information) abou the web page
+
+	Tags again, can have attribute(s) (one or more than one)
+	attribute: name-value pair
+	they are used to provide extra information (metadata) about the elements/tags
+
+	<a id="firstNewsAnchor" href="https://timesofindia.indiatimes.com/city/mumbai/signs-of-rift-route-ajit-pawar-files-via-devendra-fadnavis-says-cm-eknath-shinde/articleshow/103262802.cms"> 
+
+	signs of rift route ajit pawar files via devendra fadnavis says cm eknath-shinde
+
+	</a>
+
+	<a id="secondNewsAnchor"></a>
+
+
+	title => displays the title of the page in the title bar of the window
+
+	stucture of an HTML file:
+	a. should start with DOCTYPE tag
+	b. the document begins with <HTML> tag and ends with </HTML> tag
+	c. every HTML file will have two more children tags of <HTML> tag => <head> (optional) and <body>
+	d. head => contains information about the HTML file (no design will be present here)
+		i. which encoding format will be used to encode the HTML content before sending the same to the client from the server machine
+		ii. who has created this document
+		iii. how this web page content is going to be rendered in the device according to the view area
+		iv. the duration after which the page will automatically refresh or reload
+		etc.
+		these information are placed inside "head" tag using "meta" tags
+		Note: <meta charset="utf-8"> should be the first meta tag inside the head tag
+
+		
+	e. body => this element contains the HTML page design
+
+
+	RWA: Responsive Web Application => the application's content (the web pages) are adjusted according to the view area for better readability
+
+	default web server s/w present in the Windows O/S: IIS (Inter Information Service)
+	Application Development Server (App Server): an web server s/w used to host an web application during development time using a random port number. the web application hosted by a app development server can be requested only from the development machine.
+	in VS code: Live Server, lite-server etc.
+
+
+
+XML:
+	Extensible Markup Language
+		- to describe data
+
+	a. <?xml version="1.1"?> => XML declaration
+	b. followed by the XML declaration line, an root element must be present
+	Note: ONLY one root element can be present in the XML file (XML file should logically present/describe one type of data structure)
+
+
+Difference with HTML:
+	HTML creates/describes the structure of your web page
+	XML describes data
+
+	HTML uses pre-defined tags to describe the structure of the web page
+	XML uses user-defined tags to describe the data
+
+	
+
+some sample employee data in CSV fromat:
+---------------------------------------------------
+
+name		id		salary
+Kuldeep Soni,1,10000
+Nikita,2,10000
+sanjay,3,11000
+
+
+
+

@@ -1,0 +1,21 @@
+<?xml version="1.1"?>
+<!-- XML declaration -->
+<employees>
+    <employee>
+        <name>Kuldeep</name>
+        <id>1</id>
+        <salary>10000</salary>
+    </employee>
+
+    <employee>
+        <name>Nikita</name>
+        <id>3</id>
+        <salary>30000</salary>
+    </employee>
+
+    <employee>
+        <name>Sanjay</name>
+        <id>3</id>
+        <salary>30000</salary>
+    </employee>
+</employees>
