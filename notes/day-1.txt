@@ -75,8 +75,79 @@ XML:
 
 	a. <?xml version="1.1"?> => XML declaration
 	b. followed by the XML declaration line, an root element must be present
-	Note: ONLY one root element can be present in the XML file (XML file should logically present/describe one type of data structure)
+	Note: ONLY one root element can be present in the XML file (XML file should logically present/describe one type of data structure) 
+	Root element can be called as top-level or document element
+	c. every element must have a start and end tags or must be a self-closing tag (empty)
+	d. every element can either contain another element or text
+	e. must have whitespaces (spaces, tabs, new lines and/or combination of those) which are also considered part of the element
+	f. elements can have attributes (which should be mentioned in the start, NOT in the end tag)
+	g. attribute names are case-sensitive. 
+	h. attribute  values must be placed inside either matching single or double quote
 
+element-naming rules:
+	1. can contain letters [A-Z and a-z]
+	2. can contain numbers [0-9]
+	3. can contain _ (underscore), - (dash) , . (period)
+	4. element name can start with either a letter or an underscore, BUT NOT with a number or punctuation character or the letters xml/XML/Xml 
+	5. element name can not contain any whitespace
+	<first-name> 
+
+XML character entity: &gt; &lt; &amp; &apos; &quot;
+
+	XML documents:
+		a. Well formed XML document: when an XML document follows proper structure and general rules of XML
+		b. Validated XML document: when an XML document NOT ONLY follows proper structure and general rules of XML (well formed), but also verified against the rules set through either a DTD or Schema file about the tree structure that describes the data in XML file
+
+	
+	DTD file: Document Type Definition
+	internal DTD: part of the same XML document
+	external DTD file: *.dtd. link this file with the XML file
+
+	Contains the defintion of
+		- elements
+		- attributes
+		- entities
+		- notations
+
+	Cardinality of elemenmts: decide appearence rules
+	* => 0 or many
+	+ => at least 1 or many
+	? => optional
+	| => or
+
+	PCDATA and 
+	CDATA=> Unparsed CDATA the element contains some character data that should not be parsed by the parser
+	#PCDATA => Parsed Character Data element contains data that is going to be parsed by the parser
+
+	elements:
+	attributes
+	<!ATTLIST element-name attribute-name attribute_type default>
+	possible attribute-types are:
+	CDATA, Enumerated, ENTITY, ENTITIES, ID, IDREF, IDREFS, NMTOKEN, NOTATION
+
+	attribute default, specified as: #IMPLIED, #REQUIRED, #FIXED or literal-value
+	
+
+	Schema file:
+
+
+SGML: Standard Generalized Markup Language
+XML files are processed by XML processor
+
+XML can be used in distributed environemnt to represent data in platform and technology neutral manner
+Note: JSON => JavaScript Object Notation
+[
+	{
+		"name":"Kuldeep",
+		"id":1,
+		"salary":10000
+		"isManager":false
+	},
+	{
+	},
+	{
+	}
+]
 
 Difference with HTML:
 	HTML creates/describes the structure of your web page
@@ -94,6 +165,11 @@ name		id		salary
 Kuldeep Soni,1,10000
 Nikita,2,10000
 sanjay,3,11000
+
+character entities:
+HTML character entity/XML character entity
+it is used as replacement text when referencing its name between an ampersand and semicolon
+
 
 
 

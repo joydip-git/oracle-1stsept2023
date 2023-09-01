@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<questions>
+    <question id="1">
+        <question-text>
+            is this legal?
+        </question-text>
+        <answer>
+            yes
+        </answer>
+    </question>
+</questions>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employee>
+    <![CDATA[
+        <firstname>Kuldeep</firstname>
+        <lastname>Kuldeep</lastname>
+        this should not be parsed by parser
+    ]]>
+    <name>
+        <first-name>Kuldeep</first-name>
+        <middle-name></middle-name>
+        <last-name>
+            Soni
+        </last-name>
+    </name>
+    <id>1</id>
+    <salary>
+        <amount>
+            10000
+        </amount>
+        <comment>
+            should not be &lt; 10000
+            should not be &amp; 10000
+        </comment>
+    </salary>
+</employee>

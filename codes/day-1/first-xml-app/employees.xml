@@ -1,20 +1,46 @@
-<?xml version="1.1"?>
+<?xml version="1.1" encoding="UTF-8" standalone="yes"?>
 <!-- XML declaration -->
+<!-- DTD declaration-->
+<!DOCTYPE employees SYSTEM "employees.dtd">
+<!-- <!DOCTYPE employees [
+    <!ELEMENT employees (employee+)>
+    <!ELEMENT employee (name,id,salary)>
+    <!ELEMENT name (first-name,middle-name?,last-name)>
+    <!ELEMENT first-name (#PCDATA)>
+    <!ELEMENT middle-name (#PCDATA)>
+    <!ELEMENT last-name (#PCDATA)>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT salary (#PCDATA)>
+    <!ATTLIST employee department_id ID #REQUIRED>
+]> -->
+
 <employees>
     <employee>
-        <name>Kuldeep</name>
+        <name>
+            <first-name>Kuldeep</first-name>
+            <middle-name></middle-name>
+            <last-name>Soni</last-name>
+        </name>
         <id>1</id>
-        <salary>10000</salary>
+        <salary> 10000 </salary>
     </employee>
 
     <employee>
-        <name>Nikita</name>
+        <name>
+            <first-name> Nikita </first-name>
+            <middle-name></middle-name>
+            <last-name></last-name>
+        </name>
         <id>3</id>
         <salary>30000</salary>
     </employee>
 
     <employee>
-        <name>Sanjay</name>
+        <name>
+            <first-name>Sanjay</first-name>
+            <middle-name></middle-name>
+            <last-name></last-name>
+        </name>
         <id>3</id>
         <salary>30000</salary>
     </employee>
