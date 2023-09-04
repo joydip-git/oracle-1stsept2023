@@ -43,13 +43,13 @@ DTD:
 				use: %entity-name;
 
 	XML namespaces:
+	---------------------------------------------------------------
 		logical name containing several type definitions
 		logical name which represents  case-sensitive internationalized resource identifier (IRI) reference (URL or URN)
 		URL: Uniform Resource Locator
 		URN: Uniform Resource Name
 
 		employees => schema file
-
 		http://oracle.com/employees => the schema file defining employees and its structure is present in the URL given
 
 	XML Schema:
@@ -114,7 +114,7 @@ DTD:
 	schema file:
 		schema --> element, attribute, simpleType, complexType, group, attribute-group
 		element --> attribute, simpleType, complexType, sequence, choice
-		simpleType--> restriction. list, union
+		simpleType--> restriction, list, union
 		complexType --> group, attribute, sequence, choice, all, attribute-group
 		attribute-group --> attribute
 		group--> choice, all
@@ -136,6 +136,44 @@ DTD:
 
 
 	number  => fractional and non-fractional
+
+
+	JavaScript:
+		a programming language for the web application
+		provides dynamism to the static HTML web pages
+		it was invented in 1994
+
+	a. JS code can be written in HTML file using <script> tag
+	b. JS code can be written in separate file with extension .js (*.js) and then that file can be linked with HTML file using script tag
+	c. script tag can be part of either <head> or <body> or simultaneously both
+	d. in HTML file you can link as many JS files as you want, i.e. multiple script tags can be part of HTML head or body
+
+	CSS: Cascading Stylesheet
+		applying style to the HTML document (tags)
+
+	CSS structure:
+		css-propert-name:property-value
+		background-color:'grey'
+		font-family:'consolas'
+
+	a. inline style
+	<HTML-tag style="background-color:'grey';font-family:'consolas'">
+
+	b. outline style:
+	i.you can provide the styles within <style> tag, which can be part of either head or body element, just like script tag
+	ii. you can create separate CSS file (with extension .css) and provide your style there and then link the CSS file with HTML file using <link> tag. You can use multiple link tags in the HTNL document and can attach multiple CSS files.
+
+	i. element-name{
+		property-name:property-value;
+		........................
+	   }
+	   element-name1, 
+	   element-name2{
+		property-name:property-value;
+		........................
+	   }
+
+
 
 
 
