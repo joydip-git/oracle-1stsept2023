@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
     <xs:attributeGroup name="employee_attributes">
-        <xs:attribute name="id" type="xs:ID"></xs:attribute>
-        <xs:attribute name="manager_id" type="xs:IDREF"></xs:attribute>
+        <xs:attribute name="employee_id" type="xs:ID" use="required"></xs:attribute>
+        <xs:attribute name="manager_id" type="xs:IDREF" use="optional"></xs:attribute>
     </xs:attributeGroup>
+
+    <xs:simpleType name="cities">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Bangalore"></xs:enumeration>
+            <xs:enumeration value="Chennai"></xs:enumeration>
+            <xs:enumeration value="Mumbai"></xs:enumeration>
+            <xs:enumeration value="Pune"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="address_info">
+        <xs:sequence>
+            <xs:element name="door_no" type="xs:int" />
+            <xs:element name="locality" type="xs:string" />
+            <xs:element name="city" type="cities" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="address_type">
+        <xs:choice>
+            <xs:element name="permanent_address" type="address_info" />
+            <xs:element name="temporary_address" type="address_info" />
+        </xs:choice>
+    </xs:complexType>
+
+
+    <xs:simpleType name="salary_type">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="100000"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="email_type">
+        <xs:list itemType="xs:string" />
+    </xs:simpleType>
 
     <xs:element name="employees">
         <xs:complexType>
@@ -24,11 +60,15 @@
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="salary" type="xs:double" />
+                            <xs:element name="salary" type="salary_type" />
+                            <xs:element name="address" type="address_type" minOccurs="1"
+                                maxOccurs="unbounded" />
+                            <xs:element name="email" type="email_type" />
                         </xs:sequence>
                         <xs:attributeGroup ref="employee_attributes"></xs:attributeGroup>
-                        <!-- <xs:attribute name="id" type="xs:ID"></xs:attribute>
-                        <xs:attribute name="manager_id" type="xs:IDREF"></xs:attribute> -->
+                        <!-- <xs:attribute name="employee_id" type="xs:ID"
+                        use="required"></xs:attribute>
+                        <xs:attribute name="manager_id" type="xs:IDREF" use="optional"></xs:attribute> -->
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

@@ -68,7 +68,74 @@ DTD:
 		name => first-name, middle-name, last-name
 		first-name => data
 
+		Main XML namespaces:
+		-----------------------------------------
+		a. http://www.w3.org/2001/XMLSchema => this URL contains an XML schema file with definition of types (simple type, complex type, sequence, attribute, attribute group, element etc.) to create your own XML schema file, are present in this URL
+		Note: refer this URL in your schema file
+		example: 
+		<?xml version="1.0" encoding="utf-8"?>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+		</xs:schema>
 		
+		b. http://www.w3.org/2001/XMLSchema-instance => this URL contains a schema file having definitions of types/elements: 
+		i. "noNamespaceSchemaLocation": this can be used to refer to an XML file which does not have any namespace or which is not hosted in internationalized URL, rather present in local system.
+		ii. "schemaLocation": this element can be used to refer to an XML schema file present at some URL
+
+	A. How to refer a local schema file from your XML file:
+	schema file: (employees.xsd)
+	-------------------------------
+	<?xml version="1.0" encoding="utf-8"?>
+	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	</xs:schema>
+	
+	xml file: (employees.xml)
+	-------------------------------
+	<?xml version="1.0" encoding="utf-8">
+	<employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="employees.xsd">
+
+	B. How do you refer an XML schema file if that has been represented by an URL and not a local schema file
+	
+	schema file: (employees.xsd)
+	-----------------------------
+	<?xml version="1.0" encoding="utf-8"?>
+	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 	targetNamespace="http://www.oracle.com/schemas/employee-schema">
+	</xs:schema>	
+
+	xml file: (employees.xml)
+	----------------------------
+	<?xml version="1.0" encoding="utf-8">
+	<employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.oracle.com/schemas/employee-schema">
+
+
+	components (pre-defined elements to define your schema) of schema file:
+
+	schema file:
+		schema --> element, attribute, simpleType, complexType, group, attribute-group
+		element --> attribute, simpleType, complexType, sequence, choice
+		simpleType--> restriction. list, union
+		complexType --> group, attribute, sequence, choice, all, attribute-group
+		attribute-group --> attribute
+		group--> choice, all
+				
+
+	schema => root element in every schema file
+	data types => string, int (non-fractional), double, decimal, float (fractional) etc.
+
+	simpleType => is a type which extends bulit-in or other types
+
+	<xs:simpleType name="employee_id">
+	</xs:simpleType>
+
+	complexType => you define a type which might contain
+			- simple content
+			- a <seqeunce> declaration
+			- a <choice> declaration
+			- a mixed or empty content
+
+
+	number  => fractional and non-fractional
 
 
 

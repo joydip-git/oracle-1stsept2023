@@ -1,1 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="./employees.xsd">
+    <employee employee_id="orcl100">
+        <name>
+            <first-name>joydip</first-name>
+            <last-name>mondal</last-name>
+        </name>
+        <salary>
+            100000
+        </salary>
+        <address>
+            <permanent_address>
+                <door_no>200</door_no>
+                <locality>ECity</locality>
+                <city>Bangalore</city>
+            </permanent_address>
+        </address>
+        <email>
+            joydip@gmail.com
+            joy@oracle.com
+        </email>
+    </employee>
+    <employee employee_id="orcl101" manager_id="orcl100">
+        <name>
+            <first-name>anil</first-name>
+            <last-name>kumar</last-name>
+        </name>
+        <salary>
+            20000
+        </salary>
+        <address>
+            <temporary_address>
+                <door_no>101</door_no>
+                <locality>Vassi</locality>
+                <city>Mumbai</city>
+            </temporary_address>
+        </address>
+        <email>
+            anil.kumar@gmail.com
+            amil.k@oracle.com
+        </email>
+    </employee>
+</employees>
