@@ -1,14 +1,24 @@
 <!ELEMENT people (person+)>
 <!-- parameter entity -->
-<!ENTITY % person_elements "name, salary">
+<!ENTITY % person_elements "name, salary, image">
 <!ENTITY % list_of_cities "Bangalore|Chennai|Mumbai|Pune">
+<!NOTATION GIF SYSTEM "image/gif">
+<!NOTATION JPEG SYSTEM "image/jpeg">
 
 <!ELEMENT person (%person_elements;)>
-<!ATTLIST person employee_id ID #REQUIRED>
-<!ATTLIST person mobile_no CDATA #REQUIRED>
-<!ATTLIST person city (%list_of_cities;) #REQUIRED>
-<!ATTLIST person manager_id IDREF #IMPLIED>
-<!ATTLIST person list_of_employees IDREFS #IMPLIED>
-<!ATTLIST person organization CDATA #FIXED "ORACLE">
+<!ATTLIST person
+    employee_id ID #REQUIRED
+    mobile_no CDATA #REQUIRED
+    city (%list_of_cities;) #REQUIRED
+    manager_id IDREF #IMPLIED
+    list_of_employees IDREFS #IMPLIED
+    organization CDATA #FIXED "ORACLE"    
+    >
+<!ATTLIST image
+    source CDATA #REQUIRED
+    image_type NOTATION (JPEG|GIF) #REQUIRED
+    >
+
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT salary (#PCDATA)>
+<!ELEMENT image EMPTY>

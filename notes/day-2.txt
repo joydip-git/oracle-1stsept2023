@@ -8,6 +8,7 @@ DTD:
 	<!ATTLIST element-name attribute-name2 attribute-type attribute-value>	
 
 	Attribute types:
+	-------------------------------
 	CDATA: the value of the attribute is character data
 	(enum1|enum2): the value of the attribute is any one from the enumerated list
 	ID: the value of the attribute is an unique id
@@ -30,6 +31,16 @@ DTD:
 		<option> Bangalore </option>
 		<option> Chennai </option>
 	</select>
+
+	entity:
+		built-in (&gt;. &lt; etc.)
+		custom
+			a. general entities
+				syntax: <!ENTITY entity-name "entity-value">
+				use : 	&entity-name;
+			b. parameter entities
+				syntax: <!ENTITY % entity-name "entity-value">
+				use: %entity-name;
 
 
 	

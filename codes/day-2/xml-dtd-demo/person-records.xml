@@ -5,15 +5,18 @@
         list_of_employees="orcl101 orcl102" organization="ORACLE">
         <name>Joydip</name>
         <salary>1000</salary>
+        <image source="" image_type="JPEG" />
     </person>
     <person employee_id="orcl101" mobile_no="9191919191" city="Bangalore" manager_id="orcl100"
         organization="ORACLE">
         <name>anil</name>
         <salary>2000</salary>
+        <image source="" image_type="GIF" />
     </person>
     <person employee_id="orcl102" mobile_no="9292929292" city="Pune" manager_id="orcl100"
         organization="ORACLE">
         <name>anil</name>
         <salary>2000</salary>
+        <image source="" image_type="JPEG" />
     </person>
 </people>
