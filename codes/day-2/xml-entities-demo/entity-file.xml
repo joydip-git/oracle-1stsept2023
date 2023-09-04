@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE sample SYSTEM "./entities.dtd"> -->
+<!DOCTYPE sample SYSTEM "./entities.dtd" [
+    <!-- general entity-->
+    <!ENTITY company "ORACLE">
+]>
+<sample>
+    <expression> 5 &gt; 3 </expression>
+    <expression> I work for &company; in Bangalore </expression>
+</sample>

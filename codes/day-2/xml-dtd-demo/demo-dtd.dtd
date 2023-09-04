@@ -1,0 +1,14 @@
+<!ELEMENT people (person+)>
+<!-- parameter entity -->
+<!ENTITY % person_elements "name, salary">
+<!ENTITY % list_of_cities "Bangalore|Chennai|Mumbai|Pune">
+
+<!ELEMENT person (%person_elements;)>
+<!ATTLIST person employee_id ID #REQUIRED>
+<!ATTLIST person mobile_no CDATA #REQUIRED>
+<!ATTLIST person city (%list_of_cities;) #REQUIRED>
+<!ATTLIST person manager_id IDREF #IMPLIED>
+<!ATTLIST person list_of_employees IDREFS #IMPLIED>
+<!ATTLIST person organization CDATA #FIXED "ORACLE">
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>

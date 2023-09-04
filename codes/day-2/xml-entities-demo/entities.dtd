@@ -1,0 +1,2 @@
+<!ELEMENT sample (expression+)>
+<!ELEMENT expression (#PCDATA)>

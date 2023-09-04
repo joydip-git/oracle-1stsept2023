@@ -1,0 +1,35 @@
+DTD:
+	Element => ELEMENT
+	Empty element => <!ELEMENT <element-name> EMPTY>
+	Any element => <!ELEMENT element-name ANY>
+
+	Attribute
+	<!ATTLIST element-name attribute-name1 attribute-type attribute-value>
+	<!ATTLIST element-name attribute-name2 attribute-type attribute-value>	
+
+	Attribute types:
+	CDATA: the value of the attribute is character data
+	(enum1|enum2): the value of the attribute is any one from the enumerated list
+	ID: the value of the attribute is an unique id
+	IDREF: the value of the attribute is ID of another element
+	IDREFS: the value of the attribute is list of the other IDs of other elements
+	NMTOKEN: the value of the attribute is a valid XML name
+	NMTOKENS: the value of the attribute is a list of valid XML names
+	NOTATION: the value of the attribute is the name of a notation
+	ENTITY: the value of the attribute is an entity
+	ENTITIES: the value of the attribute is a list of entities
+
+	Attribute values:
+	#REQUIRED: the attribute value is required
+	#IMPLIED: the attibute value is optional
+	#FIXED value: the attribute value is fixed (mention the value)
+
+
+	<select>
+		<option selected disabled>--select--</option>
+		<option> Bangalore </option>
+		<option> Chennai </option>
+	</select>
+
+
+	
