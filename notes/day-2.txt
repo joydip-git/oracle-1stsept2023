@@ -42,5 +42,46 @@ DTD:
 				syntax: <!ENTITY % entity-name "entity-value">
 				use: %entity-name;
 
+	XML namespaces:
+		logical name containing several type definitions
+		logical name which represents  case-sensitive internationalized resource identifier (IRI) reference (URL or URN)
+		URL: Uniform Resource Locator
+		URN: Uniform Resource Name
+
+		employees => schema file
+
+		http://oracle.com/employees => the schema file defining employees and its structure is present in the URL given
+
+	XML Schema:
+		alternative to DTD
+		used to define the structure of XML document
+		the xml document can be validated against XML schema
+		xml schemas are stored in XSD file
+		XSD: XML Schema Definition
+		*.xsd extension
+		is created using XML itself
+		to define elements/types
+			- Simple and Complex types
+			- element and attribute declarations
+
+		employees => name, id, salary
+		name => first-name, middle-name, last-name
+		first-name => data
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	

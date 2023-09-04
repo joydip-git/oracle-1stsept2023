@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:attributeGroup name="employee_attributes">
+        <xs:attribute name="id" type="xs:ID"></xs:attribute>
+        <xs:attribute name="manager_id" type="xs:IDREF"></xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:element name="employees">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- <xs:element name="id" type="xs:string" /> -->
+                            <xs:element name="name">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="first-name" type="xs:string" minOccurs="1"
+                                            maxOccurs="1" />
+                                        <xs:element name="middle-name" type="xs:string"
+                                            minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="last-name" type="xs:string" minOccurs="1"
+                                            maxOccurs="1" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="salary" type="xs:double" />
+                        </xs:sequence>
+                        <xs:attributeGroup ref="employee_attributes"></xs:attributeGroup>
+                        <!-- <xs:attribute name="id" type="xs:ID"></xs:attribute>
+                        <xs:attribute name="manager_id" type="xs:IDREF"></xs:attribute> -->
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
