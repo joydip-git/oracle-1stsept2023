@@ -29,5 +29,3 @@ Note:
 *: the class containing main method and the classes for employee types should be present in different packages in the application
 **: every data member must have getter and setter.
 ***: the class must have default and parameterized constructor
-
-	
