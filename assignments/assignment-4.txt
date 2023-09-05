@@ -1,12 +1,12 @@
 create a Java aplication to find out which people/person are/is outstanding
 
 
-two types pr person:
+two types of person:
 
 professor:
 	attributes: name, department, number of books published
 	functinality: returns true or false based on whether the professor is outstanding or not
-	[logic: a professor is outstanding if the person has published more than 5 books]
+	[logic: a professor is outstanding if the professor has published more than 5 books]
 
 student:
 	attributes: name, branch, marks
