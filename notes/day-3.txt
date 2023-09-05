@@ -1,0 +1,19 @@
+JS:
+	data types
+	operators
+	control flow statements
+
+data types:
+	string, number, boolean, object
+	undefined, NaN, Infinity, NULL
+
+	undefined => means a variable does not have any value assigned
+
+Note: 
+	a. there is no strict data typing. use var keyword to declare variables.
+	b. there is no character data type. hence there is no difference between single and double quotes.
+	c. since, there is no strict data typing in JS, hence any variable at different point of time can store values of different data type
+	
+	var x = 100
+	x = 'Tanmay'
+	
