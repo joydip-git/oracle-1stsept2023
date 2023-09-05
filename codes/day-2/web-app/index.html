@@ -12,17 +12,49 @@
     </script>
     <script src="./index.js"></script>
     <style>
-        table {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: blue;
+        /*
+        table,
+        #problemParagraph {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                color: blue;
         }
-
+        
+        element selector 
         thead,
         h1 {
             background-color: burlywood;
             color: brown;
         }
+
+        id selector
+        #paraSolution {
+            font-family: "Courier New", Courier, monospace;
+            color: grey;
+        }
+
+       class selector
+        .para-font {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .para-border {
+            border-style: solid;
+            border-width: 2px;
+            border-color: blue;
+            border-radius: 5px;
+        }
+
+        .para-common {
+            color: brown;
+            width: 600px;
+        }
+
+        */
     </style>
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -33,7 +65,17 @@
     <!-- <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: blue;"> 
         <thead style="background-color: burlywood;color: brown;">
         -->
-
+    <p id="problemParagraph">
+        Problem: The following is the list of products, which have been statically deisgned
+    </p>
+    <p id="paraSolution">
+        Solution: You should replace the static data by dynamic data
+    </p>
+    <p class="para-common para-font para-border">
+        Details of Solution:
+        You have to fetch data from any data store (database/file, array etc.) using JS code and then dynamically have
+        to generate number of rows for as many records you have fetched
+    </p>
     <table>
         <thead>
             <tr>

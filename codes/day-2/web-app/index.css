@@ -1,0 +1,35 @@
+table,
+#problemParagraph {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: blue;
+}
+
+/* element selector */
+thead,
+h1 {
+  background-color: burlywood;
+  color: brown;
+}
+/* id selector */
+#paraSolution {
+  font-family: "Courier New", Courier, monospace;
+  color: grey;
+}
+
+/* class selector */
+.para-font {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+}
+.para-border {
+  border-style: solid;
+  border-width: 2px;
+  border-color: blue;
+  border-radius: 5px;
+}
+.para-common {
+  color: brown;
+  width: 600px;
+}
