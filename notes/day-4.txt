@@ -33,8 +33,10 @@ oopdemoapp.drawing
 
 
 OOAD:
+	high cohesion, low coupling
 	SOLID:
 		Single Responsibility Principle
+		Open Closed Principle
 OOP: 
 	App => taking input and printing output
 
@@ -79,6 +81,13 @@ separate projects: (individual project with single package containing individual
 
 	Object[][] data = new Object[3][7];
 	data[0][1]=9191919192
+
+
+Base => Child
+
+
+constructor:
+	a special method of a class, which assigns default or user values to the data members of the same class and same class ONLY
 	
 				
 	

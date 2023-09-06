@@ -2,20 +2,46 @@ package com.java.classobjectdemo.ui;
 
 import java.util.Scanner;
 
-import com.java.classobjectdemo.entities.Customer;
+import com.java.classobjectdemo.entities.*;
 
 public class App {
 
+	/*
+	 * static void printSalarySlip(Developer developer) {
+	 * System.out.println(developer.calculateSalary()); }
+	 * 
+	 * static void printSalarySlip(Hr hr) {
+	 * System.out.println(hr.calculateSalary()); }
+	 */
+	static void printSalarySlip(Employee employee) {
+		System.out.println(employee.calculateSalary());
+		/*
+		 * if(employee instanceof Developer) { Developer developer = (Developer)
+		 * employee; System.out.println(developer.calculateDeveloperSalary()); }
+		 * if(employee instanceof Hr) { Hr hr = (Hr) employee;
+		 * System.out.println(hr.calculateHrSalary()); }
+		 */
+	}
+
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		Employee anilDeveloper = null;
+		anilDeveloper = new Developer("anil", 1, 1000, 2000, 3000, 4000);
 
-		Customer[] customersArrayObjectReference = new Customer[2];
-		for (int i = 0; i < 2; i++) {
-			Customer customerObjectReference = acceptInputFromUser(scanner);
-			customersArrayObjectReference[i] = customerObjectReference;
-		}
+		Employee sunilHr = null;
+		sunilHr = new Hr("sunil", 2, 2000, 3000, 4000, 5000);
 
-		scanner.close();
+		printSalarySlip(anilDeveloper);
+		printSalarySlip(sunilHr);
+
+		/*
+		 * Scanner scanner = new Scanner(System.in);
+		 * 
+		 * Customer[] customersArrayObjectReference = new Customer[2]; for (int i = 0; i
+		 * < 2; i++) { Customer customerObjectReference = acceptInputFromUser(scanner);
+		 * customersArrayObjectReference[i] = customerObjectReference; }
+		 * 
+		 * scanner.close();
+		 */
 	}
 
 	static Customer acceptInputFromUser(Scanner scanner) {
