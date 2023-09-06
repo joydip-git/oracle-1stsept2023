@@ -1,0 +1,80 @@
+main => thread
+
+source code (App.java) => (javac) => byte code (App.class)
+
+>javac App.java
+>java App.class
+
+what is JDK, JRE and JVM?
+
+platform dependent
+JDK => Java Development Kit => tools (javac, java, javap)
+	=> Standard Edition (Java SE)
+	=> Enterprise Edition (Java EE)
+	=> Micro Edition (Java ME)
+
+JRE => Java Runtime Environment
+	
+JVM => Java Virtual Machine
+
+JVM => abstract machine => It is a specification that provides a runtime environment in which Java bytecode can be executed
+
+JRE => physical implementation of JVM
+
+oopdemoapp.dataaccess
+	class SqlDataAccess{}
+	class OracleDataAccess{}
+	class MySqlDataAccess{}
+
+oopdemoapp.drawing
+	class Rectangle{}
+	class Triangle{}
+	class Square{}
+
+
+OOAD:
+	SOLID:
+		Single Responsibility Principle
+OOP: 
+	App => taking input and printing output
+
+	//1. print choices to the user
+	//2. ask user to make choice
+	//3. ask user to enter two values
+	//4. use the Calculation class to call specific methods based on user choice and pass the two values to those methods
+	//5. get the output
+	//6. print the output
+	//7. ask user whether to continue the application or not
+	//8. depending on the choice either continue or terminate the application
+
+
+initial structure:(single project with multiple packages containing individual class(s))
+	oopdemo
+		packages - com.java.businesslogic => Calculation.java
+			   com.java.utilities => UiUtility.java
+			   com.java.userinterface => App.java
+
+separate projects: (individual project with single package containing individual class(s))	
+	
+	CalculationLibrary - com.java.businesslogic => Calculation.java
+	UtilityLibrary - com.java.utilities => UiUtility.java
+	OOPDemo - com.java.userinterface => App.java
+
+	Using one from another:
+
+	a. add project dependency
+		UtilityLibrary->build path->projects tab->click on add button->selected CalculationLibrary
+		OOPDemo->build path->projects tab->click on add button->selected UtilityLibrary
+
+	b. add External JARS(removed all the project dependencies first)
+		CalculationLibrary - com.java.businesslogic => Calculation.java 
+		created JAR file => calculationlibrary.jar (Calculation.class)
+
+		UtilityLibrary - com.java.utilities => UiUtility.java
+		created JAR file => utilitylibrary.jar (UiUtility.class)
+
+		OOPDemo - com.java.userinterface => App.java
+		OOPDemo->build path->libraries tab->click on add extranl jars->selected calculationlibrary.jar and utilitylibrary.jar
+				
+	
+
