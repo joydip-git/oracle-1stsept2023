@@ -27,6 +27,14 @@ public class App {
 		invokeCalculationMethods(calcInteger);
 		invokeCalculationMethods(calcFloat);
 		// invokeCalculationMethods(calcString);
+
+		IList<Integer> numbers = new MyList<Integer>();
+		IList<Double> numbers1 = new MyList<Double>();
+		passCollection(numbers);
+		passCollection(numbers1);
+	}
+	static <E> void passCollection(IList<?> list) {
+		
 	}
 
 	// upper-bound wild-card
