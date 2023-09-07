@@ -1,0 +1,21 @@
+1. abstract class and interface:
+	this type of class is used in situation where you want to have common behavior (method) in different child classes, but the implemention of the behaviors will depend on those child classes, whereas there is no code to write for those base class methods. in that case, declare the methods but do not provide implementation for them in the base and declare them as abstract. As a consequence, the class must be declared with abstract keyword too, since no abstract method can be part of a non-abstract class.	
+
+	a child class, inheriting from abstract base class, should implement all the abstract methods. Otherwise you have to declare the child class as an abstract class, too.
+
+	Interface, too, is a type of abstract class, just that it is a collection of pure abstract methods. no data can be part of this. Hene choose interface over abstract class, when you have just common behaviors amongst child classes, but not common data. Use abstract class when both data and some behaviors are common amongst the child classes.
+
+	**: only static final data can be part of an interface.
+
+	Note: 
+	a. when the base class method is NOT abstract, the child class MAY OR MAY NOT override that method. its a choice for the child class, whether to override or not. Child classes are NOT forced to re-implement the base class method.
+	b. when the base class method is abstract, the child class MUST override that method. its no longer a choice for the child class, whether to override or not. Child classes are forced to implement the base class method.
+
+
+abstract classes can contain non-abstract methods, whhich interface can't.
+abstract classes can contain data members, which interface can't (except, static final member).
+abstract classes can have explicit constructors, which interface can't
+abstract class members are not by default abstract (you have to use abstract keyword), whereas in interface all methods are be default abstract (no need to use abstract keyword)
+
+objects of both abstract class and interface can't be created.
+Both of them are used to provide abstarction of implementation and provide dynamic polymorphism facility.
