@@ -19,3 +19,23 @@ abstract class members are not by default abstract (you have to use abstract key
 
 objects of both abstract class and interface can't be created.
 Both of them are used to provide abstarction of implementation and provide dynamic polymorphism facility.
+
+Object <= Any-class <= Any-Child-class
+
+
+2. Generics:
+	a. type-safety
+	b. helps you detect bugs at compile-time
+	c. no casting required
+
+T => Type
+E => Element
+K => Key
+N => Number
+V => Value
+
+
+SOLID => I (Interface Segregation Principle)
+select * from products where product_name like %something%
+
+
