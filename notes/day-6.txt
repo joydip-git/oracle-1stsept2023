@@ -1,8 +1,9 @@
 Callback mechanism:
 	method reference
-	functional interface
+	functional interface and generic functional interface
 	lambda expression
 	anonymous class
+	Stream
 
 collection	
 	List
@@ -81,6 +82,8 @@ Built-in functional interfaces:
 	5. Predicate<T> =>  boolean test(T t);
 	6. BiPredicate<T,U> =>  boolean test(T t, U u);
 	and many more....
+
+Stream API: what is it....
 
 
 
