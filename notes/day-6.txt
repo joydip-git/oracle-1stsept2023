@@ -1,0 +1,70 @@
+Callback mechanism:
+	method reference
+	functional interface
+	lambda expression
+	anonymous class
+
+collection	
+	List
+	Set
+	Map
+
+Callback Scenario:
+
+Trainer
+	data member:
+	assistance:Assistant
+
+	functionalities:
+	provideTraining
+	askForAssistance
+		
+			
+
+Assistant
+	data member:
+	name:String
+
+	functionalities:
+	helpTrainer
+					
+Facilities
+	getMarkers
+	getAttendanceSheet
+
+	getRemote
+	getProjector
+	getAttendanceSheet
+
+function arguments:
+	a. primitive data (int, long, char, boolean...)
+	b. reference data (reference of an object, like, String, Object, user-defined class or interface storing reference of the actual object)
+	c. reference of a method
+
+How to achieve callback in Java?
+	answer: using method reference technique
+
+which concepts are required for method reference?
+	answer: functional interface
+
+	what is it?
+	answer: an interface with exactly one abstract method
+
+	what is the use?
+	answer: this type of interface can be used to store reference of a method. using that functional interface you can call the method whose reference it stores.
+
+	how to use?
+	answer:
+	a. write a method with some logic (this is the method you want to pass as an argument to another fucntion)
+	b. create a functional interface with exactly one abstract method, whose signature must match the signature of the above method (in step-a)
+	Note: 
+	1. you can't store the refernce of any method in a functional interface, if the signature of the method in the functional interface and the signature of the method in another class do not match
+	2. signature: return type of the method, number of arguments, data type of arguments and position of arguments of the method
+
+	c. declare a variable of that functional interface to store the reference of method
+	i. if the method is non-static, create an instance of the class and then mention the method name in the following manner
+	functional-interface-name functional-interface-var = instance-variable-of-the-class::method-name
+	ii. if the method is static then mention the method name in the following manner
+	functional-interface-name functional-interface-var = class-name::method-name
+
+	d. now you can use that functional interface method to invoke the actual method whose reference is stotred in the functional interface variable
