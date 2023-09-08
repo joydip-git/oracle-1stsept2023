@@ -1,0 +1,9 @@
+create a class => Product with following attributes:
+name, id, price, description
+
+create a List of Product objects (minimum 4)
+
+the application must have facility for filtering the products list by 
+	- product name
+	- price
+	
