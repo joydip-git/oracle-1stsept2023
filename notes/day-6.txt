@@ -68,3 +68,19 @@ which concepts are required for method reference?
 	functional-interface-name functional-interface-var = class-name::method-name
 
 	d. now you can use that functional interface method to invoke the actual method whose reference is stotred in the functional interface variable
+
+
+Built-in functional interfaces:
+
+	Major:
+
+	1. Consumer<T> => void accept(T t);
+	2. BiConsumer<T,U> => void accept(T t, U u);
+	3. Function<T,R> => R apply(T t);
+	4. BiFunction<T,U,R> => R apply(T t, U u);
+	5. Predicate<T> =>  boolean test(T t);
+	6. BiPredicate<T,U> =>  boolean test(T t, U u);
+	and many more....
+
+
+
