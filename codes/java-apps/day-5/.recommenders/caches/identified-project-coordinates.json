@@ -1,1 +1,1 @@
-[[{"location":"C:\\Program Files\\Java\\jre-1.8","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"J2SE-1.5"}},"jre:jre:1.5.0"],[{"location":"C:\\Program Files\\Java\\jre-1.8","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"JavaSE-1.8"}},"jre:jre:1.8.0"]]
+[[{"location":"C:\\Program Files\\Java\\jre-1.8","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"JavaSE-1.8"}},"jre:jre:1.8.0"],[{"location":"D:\\oracle\\oracle-1stsept2023\\codes\\java-apps\\day-5\\jdbcapp","type":"PROJECT","hints":{"PROJECT_NAME":"jdbcapp"}},"com.java.jdbc:jdbcapp:0.0.1"]]
