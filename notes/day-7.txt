@@ -1,0 +1,77 @@
+Collection classes and interfaces
+JDBC
+File handling
+
+security:
+	a. hashing
+	b. encryption
+	c. digital signature
+
+hashing: 2^3
+
+	000 - 0
+	001 - 1
+	010 - 2
+	011 - 3
+	100 - 4
+	101 - 5
+	110 - 6
+	111 - 7
+
+	"anil", 1, 1000 => 1
+	"anil", 1, 1000 => 1
+
+	
+	value => hash function => unique value out of the actual value	
+
+	data-part1 => hash function + random (Seed) value => 1st hash code/value
+	data-part2 => hash function + 1st hash code value => 2nd hash code
+	....................................................................
+	data-partn => hash function + (n-1)th has value => nth hash code
+	
+
+Collection classes and interfaces in Java:
+
+					Iterable
+
+					Collection
+
+	List				Queue				Set
+		ArrayList			PriorityQueue			AbstractSet														HashSet
+		LinkedList			Deque (interface)			LinkedHashSet
+		Vector					ArrayDeque		SortedSet (interface)
+			Stack								TreeSet
+
+
+	Map
+		HashMap
+			LinkedHashMap
+		SortedMap (interface)
+			TreeMap
+
+List: collection of elements (duplicate vakue can be present)
+Set: 
+	It uses hashtable to store data. in this table the elements are stored using "hashing" mechanism.
+	It allows only unique elements to be added
+	Note: whenever you are creating collection of user-defined type objects, implement both hashCode() and equals() methods in the user-defined type, since HashSet uses hashCode() to calculate unique has value (using this it adds elements) and if that has value is same for more than one elements, then it uses equals() method to check whether the elements are equal or not.
+
+	element + hash code/value
+	
+public class HashSet<E> extends AbstractSet<E> implements Set<E>
+	- add()
+	- remove()
+	- contains()
+	- iterator()
+	- size()
+	- isEmpty()
+
+Object class methods:
+	a. hash
+	b. toString
+	c. equals
+
+
+
+
+
+	
