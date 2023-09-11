@@ -1,8 +1,9 @@
 create a Java application to find out every word in a string and its occurrences and display the word and its occurrences in sorted manner (sorted alphabetically by the words)
 
+input:
 Java is a programming language, I use Java for coding in any application.
-I went to cafe coffe day to have a cup of coffe.
 
+output:
 a:1
 any:1
 application:1
