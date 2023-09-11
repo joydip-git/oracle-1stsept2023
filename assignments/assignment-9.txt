@@ -16,7 +16,7 @@ main(){
 	//ask user enter a sentence
 	//call getWordsAndCount and pass the sentence
 	//get the return collection
-	//print the way iot expected
+	//print the way it is expected
 }
 
 static RT getWordsAndCount(String sentence){
