@@ -87,7 +87,40 @@ Map interface methods:
 	- keySet() => a collection (Set) of keys
 	- entrySet() => a collection (Set<Map.Entry<K,V>>) of keys and values
 
+JDBC:
+	Java DataBase Connectivity
+	a technique to interact with database
+	it provides APIs (Application Programming interface) to connect to the database and execute queries against database
+	it is part of Java SE
+	package: java.sql
+	JDBC APIs use JDBC drivers to connect to the database
 
+JDBC APIs 
+	interfaces: Driver, Connection, Statement, PreparedStatement, CallbaleStatement, ResultSet etc.
+	classes: DriverManager, Blob class, Types class
 
+4 types of drivers:
+	JDBC-ODBC driver
+	Native Driver
+	Network Protocol Driver
+	Thin Driver 
 
+steps:
+	1. register the driver class
+	2. Create the connection (using the driver)
+	3. create the statement
+	4. execute the query and may be, display the data
+	5. close the connection
+
+execute SQL query:
+	executeQuery => 
+		i. execute select queries (returning one or more than one record)
+		ii. returns ResultSet
 	
+
+
+
+
+
+
+		
