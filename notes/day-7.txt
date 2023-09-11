@@ -116,6 +116,10 @@ execute SQL query:
 	executeQuery => 
 		i. execute select queries (returning one or more than one record)
 		ii. returns ResultSet
+
+
+Maven => manages project and its dependencies
+	
 	
 
 
