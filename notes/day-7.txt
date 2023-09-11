@@ -70,6 +70,22 @@ Object class methods:
 	b. toString
 	c. equals
 
+HashMap
+	=> key and value
+	- keys have to be unique, whereas values can be duplicate
+	- the keys are not sorted
+
+TreeMap 
+	=> key and value
+	- keys have to be unique, whereas values can be duplicate
+	- the keys are sorted in ascending order
+
+Map interface methods:
+	- put(k,v)
+	- remove(k)
+	- remove(k,v)
+	- keySet() => a collection (Set) of keys
+	- entrySet() => a collection (Set<Map.Entry<K,V>>) of keys and values
 
 
 
