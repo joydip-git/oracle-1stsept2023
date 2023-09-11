@@ -3,14 +3,40 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Properties;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class App {
+
+	static void readConfigurations() {
+		FileReader reader = null;
+		Properties dbProperties = null;
+		try {
+			reader = new FileReader("src/resources/database.properties");
+
+			dbProperties = new Properties();
+			dbProperties.load(reader);
+
+			System.out.println(dbProperties.getProperty("drivername"));
+			System.out.println(dbProperties.getProperty("connectionstring"));
+			System.out.println(dbProperties.getProperty("username"));
+			System.out.println(dbProperties.getProperty("password"));
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 	public static void main(String[] args) {
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet records = null;
 		try {
+			readConfigurations();
 			// 1. register the driver for a database (loading the .class file from the
 			// ojdbc8/11.jar file)
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -26,9 +52,9 @@ public class App {
 
 			// 5. display the returned data
 			while (records.next()) {
-				
+
 				String name = records.getString("employee_name");
-				int id = records.getInt(2);				
+				int id = records.getInt(2);
 				System.out.println(name + ", " + id);
 			}
 
@@ -36,11 +62,13 @@ public class App {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		} finally {
 			try {
 				if (connection != null)
 					connection.close();
-			} catch (SQLException e) {				
+			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
